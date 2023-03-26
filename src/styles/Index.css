@@ -11,15 +11,12 @@
 }
 
 body {
+  background: var(--blue);
   font-family: "Prompt", sans-serif;
 }
 
 main {
   padding: 0.5em;
-}
-
-.bg-pink {
-  background: var(--blue);
 }
 
 .v-100 {
