@@ -4,9 +4,6 @@
 body {
   font-family: "Prompt", sans-serif;
 }
-.navbar {
-  border: 1px solid #ccc;
-}
 
 .score {
   font-size: 3em;

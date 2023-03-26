@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className={style.navbar}>
-      <h1>P.P.T.L.S</h1>
+      <h1 className={style.title}>P.P.T.L.S</h1>
       <button className={style.button} onClick={() => setOpen(!open)}>
         Acerca de mi
       </button>
