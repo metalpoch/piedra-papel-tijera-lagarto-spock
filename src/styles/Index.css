@@ -1,3 +1,6 @@
+@import "./normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+
 :root {
   --blue: #0072ef;
   --green: #00ff9f;
@@ -5,6 +8,14 @@
   --pink: #ff007f;
   --grey: #262626;
   --yellow: #ffff33;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+}
+
+main {
+  padding: 0.5em;
 }
 
 .bg-pink {
