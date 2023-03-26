@@ -1,0 +1,72 @@
+.button {
+  position: fixed;
+  font-size: 2em;
+  background: none;
+  border: 0;
+  transition: all 0.15s;
+}
+.button:hover {
+  transform: scale(1.2);
+  transition: all 0.1s;
+}
+
+.button:active {
+  transform: scale(1.5);
+  transition: all 0.1s;
+}
+
+.background {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 0.5em;
+  text-align: center;
+  width: 70vw;
+  max-width: 300px;
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-500px);
+  }
+  70% {
+    transform: translateX(10px) rotate(2deg);
+  }
+  90% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.closeButton {
+  align-self: flex-end;
+  border: 0;
+  background: none;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  color: var(--pink);
+  transition: all 0.2s;
+}
