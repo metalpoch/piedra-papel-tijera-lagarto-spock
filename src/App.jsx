@@ -6,7 +6,7 @@ import "./Index.css";
 import rules from "./assets/rules.png";
 import useFetch from "./hooks/useFetch";
 
-const URL_BASE = "https://pptls-serverless.vercel.app/api/play?hand=";
+const URL_BASE = import.meta.env.VITE_URL_BASE;
 const HANDS = {
   "🪨": "piedra",
   "📜": "papel",
