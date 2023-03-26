@@ -1,8 +1,9 @@
 .container {
   display: flex;
   justify-content: center;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-top: 0.2em;
+  user-select: none;
 }
 
 .animation {
