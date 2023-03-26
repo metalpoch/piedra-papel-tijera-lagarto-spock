@@ -6,3 +6,14 @@
   --grey: #262626;
   --yellow: #ffff33;
 }
+
+.bg-pink {
+  background: var(--blue);
+}
+
+.v-100 {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}

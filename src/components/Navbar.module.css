@@ -1,8 +1,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ccc;
-  background: var(--blue);
+  background: var(--pink);
   color: #fff;
 }
 
@@ -11,15 +10,16 @@
   border-radius: 0.25em;
   background: none;
   color: #fff;
-  padding-right: 1em;
+  padding-right: 0.5em;
+  font-size: 1.2em;
   transition: color 0.5s;
 }
 
 .button:hover {
-  color: var(--pink);
+  color: var(--blue);
   transition: color 0.5s;
 }
 
 .title {
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
