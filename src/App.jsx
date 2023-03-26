@@ -43,11 +43,11 @@ function App() {
   }, [data]);
 
   return (
-    <div className="App h-100 p-3">
+    <div className="App p-2" style={{ minHeight: "100vh" }}>
       <div className="row justify-content-around">
         <div className="col-3 col-md-1">
-          <h3>👤: {scoreUser}</h3>
-          <h3>🤖: {scorePc}</h3>
+          <h5>👤: {scoreUser}</h5>
+          <h5>🤖: {scorePc}</h5>
           <div className="d-grid gap-1">
             {Object.keys(HANDS).map((item) => (
               <button
