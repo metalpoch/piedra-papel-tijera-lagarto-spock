@@ -1,0 +1,15 @@
+@import "./normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+
+body {
+  font-family: "Prompt", sans-serif;
+}
+.navbar {
+  border: 1px solid #ccc;
+}
+
+.score {
+  font-size: 3em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+}
