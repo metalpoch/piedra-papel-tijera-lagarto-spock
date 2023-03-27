@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import Navbar from "./components/Navbar";
 import Score from "./components/Score";
 import Rules from "./components/Rules";
@@ -8,6 +10,14 @@ import Control from "./components/Control";
 import useFetch from "./hooks/useFetch";
 
 const URL_BASE = import.meta.env.VITE_URL_BASE;
+const MySwal = withReactContent(Swal);
+const HANDS = {
+  piedra: "🪨",
+  papel: "📜",
+  tijera: "✂️",
+  lagarto: "🦎",
+  spock: "🖖",
+};
 
 function App() {
   const [url, setUrl] = useState(null);
@@ -21,10 +31,17 @@ function App() {
 
   useEffect(() => {
     if (data) {
-      const { winner, msg } = data;
+      const { pc, player, winner, msg } = data;
       if (winner === "PC") setScorePc(scorePc + 1);
       if (winner === "Jugador") setScorePlayer(scorePlayer + 1);
-      alert(msg);
+
+      MySwal.fire({
+        text: `Ganador: ${winner === "Empate" ? "Nadie" : winner} -> ${msg}`,
+        timer: 5000,
+        timerProgressBar: true,
+        title: `${HANDS[player]} vs ${HANDS[pc]}`,
+        showConfirmButton: false,
+      });
       setUrl(null);
     }
   }, [data]);
