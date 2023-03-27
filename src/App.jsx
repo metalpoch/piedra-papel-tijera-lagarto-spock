@@ -9,8 +9,12 @@ import Control from "./components/Control";
 
 import useFetch from "./hooks/useFetch";
 
-const URL_BASE = import.meta.env.VITE_URL_BASE;
-const MySwal = withReactContent(Swal);
+const URL_BASE =
+  import.meta.env.VITE_URL_BASE ||
+  process.env.URL_BASE ||
+  "https://pptls-serverless.vercel.app/api/play";
+
+const MY_SWAL = withReactContent(Swal);
 const HANDS = {
   piedra: "🪨",
   papel: "📜",
@@ -36,7 +40,7 @@ function App() {
       if (winner === "Jugador") setScorePlayer(scorePlayer + 1);
 
       const text = `Ganador: ${winner === "Empate" ? "Nadie" : winner}`;
-      MySwal.fire({
+      MY_SWAL.fire({
         text: `${msg === null ? text : text + " ➜ " + msg}`,
         timer: 5000,
         timerProgressBar: true,
