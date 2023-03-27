@@ -1,7 +1,7 @@
 .character {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   background: var(--yellow);
   top: 50%;
   left: 50%;
