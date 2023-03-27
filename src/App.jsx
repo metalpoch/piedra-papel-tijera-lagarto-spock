@@ -35,8 +35,9 @@ function App() {
       if (winner === "PC") setScorePc(scorePc + 1);
       if (winner === "Jugador") setScorePlayer(scorePlayer + 1);
 
+      const text = `Ganador: ${winner === "Empate" ? "Nadie" : winner}`;
       MySwal.fire({
-        text: `Ganador: ${winner === "Empate" ? "Nadie" : winner} ➜ ${msg}`,
+        text: `${msg === null ? text : text + " ➜ " + msg}`,
         timer: 5000,
         timerProgressBar: true,
         title: `${HANDS[player]} vs ${HANDS[pc]}`,
