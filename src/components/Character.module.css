@@ -5,6 +5,7 @@
   background: var(--yellow);
   top: 50%;
   left: 50%;
+  z-index: -1;
   animation: spiner 10s infinite linear;
 }
 
