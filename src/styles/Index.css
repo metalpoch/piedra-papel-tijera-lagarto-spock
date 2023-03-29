@@ -3,16 +3,29 @@
 
 :root {
   --blue: #0072ef;
-  --green: #00ff9f;
-  --purple: #6b3f75;
   --pink: #ff007f;
-  --grey: #262626;
-  --yellow: #ffff33;
 }
 
 body {
-  background: var(--blue);
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 200vw 150vh;
+  background-position: top;
+  height: 100vh;
   font-family: "Prompt", sans-serif;
+  animation: blur 15s infinite linear;
+  color: #fff;
+}
+@keyframes blur {
+  0% {
+    backdrop-filter: blur(0px);
+  }
+  50% {
+    backdrop-filter: blur(2px);
+  }
+  100% {
+    backdrop-filter: blur(0px);
+  }
 }
 
 main {
