@@ -4,7 +4,6 @@ import withReactContent from "sweetalert2-react-content";
 import Navbar from "./components/Navbar";
 import Score from "./components/Score";
 import Rules from "./components/Rules";
-import Character from "./components/Character";
 import Control from "./components/Control";
 
 import useFetch from "./hooks/useFetch";
@@ -58,7 +57,6 @@ function App() {
       </header>
       <main>
         <Rules />
-        <Character />
         <Score pc={scorePc} player={scorePlayer} />
         <Control handle={handleUrl} />
       </main>
