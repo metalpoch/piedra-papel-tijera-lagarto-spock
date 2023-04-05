@@ -6,10 +6,12 @@
 }
 
 body {
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
   height: 100vh;
   font-family: "Prompt", sans-serif;
   color: #fff;
-  background: #002;
 }
 
 main {

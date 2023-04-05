@@ -1,4 +1,5 @@
 import style from "./About.module.css";
+import image from "../assets/profile.png";
 import {
   TfiWorld,
   TfiGithub,
@@ -14,10 +15,7 @@ const About = ({ close }) => {
         <button className={style.button} onClick={close}>
           X
         </button>
-        <img
-          className={style.photo}
-          src="https://metalpoch.github.io/assets/profile-81df509e.jpg"
-        />
+        <img className={style.photo} src={image} />
         <ul className={style.links}>
           <li>
             <a href="https://metalpoch.github.io/" target="_blank">
