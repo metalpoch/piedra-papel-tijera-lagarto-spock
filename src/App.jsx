@@ -56,7 +56,6 @@ function App() {
         <Navbar />
       </header>
       <main>
-        <Rules />
         <Score pc={scorePc} player={scorePlayer} />
         <Control handle={handleUrl} />
       </main>

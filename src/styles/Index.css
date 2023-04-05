@@ -2,39 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 
 :root {
-  --blue: #0072ef;
   --pink: #ff007f;
 }
 
 body {
-  background-image: url("../assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 200vw 150vh;
-  background-position: top;
   height: 100vh;
   font-family: "Prompt", sans-serif;
-  animation: blur 15s infinite linear;
   color: #fff;
-}
-@keyframes blur {
-  0% {
-    backdrop-filter: blur(0px);
-  }
-  50% {
-    backdrop-filter: blur(2px);
-  }
-  100% {
-    backdrop-filter: blur(0px);
-  }
+  background: #002;
 }
 
 main {
   padding: 0.5em;
-}
-
-.v-100 {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
 }
