@@ -52,7 +52,7 @@ function Game({ user, onLogout, ELECCIONES, LABEL, EMOJI, RESULT_TEXT }) {
 
    return (
     <div className="game">
-      <Header />
+      <Header username={user.username} onLogout={onLogout} />
       {stats && <Stats stats={stats} />}
       <h2>Elige tu jugada</h2>
       <Choices

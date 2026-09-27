@@ -24,7 +24,8 @@ app.config["SQLALCHEMY_DATABASE_URI"] = DB_URI
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {"pool_pre_ping": True}
 
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS_ORIGINS = [o.strip() for o in os.environ.get("CORS_ORIGINS", "*").split(",") if o.strip()]
+CORS(app, resources={r"/api/*": {"origins": CORS_ORIGINS}})
 
 db = SQLAlchemy(app)
 serializer = URLSafeTimedSerializer(app.config["SECRET_KEY"], salt="auth-token")
@@ -254,4 +255,7 @@ with app.app_context():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    host = os.environ.get("HOST", "127.0.0.1")
+    port = int(os.environ.get("PORT", 5000))
+    debug = os.environ.get("FLASK_DEBUG", "false").lower() == "true"
+    app.run(host=host, port=port, debug=debug)
